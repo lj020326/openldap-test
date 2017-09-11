@@ -1,0 +1,7 @@
+/.*
+!/.git*
+test/
+data/
+
+#admin/
+configs/

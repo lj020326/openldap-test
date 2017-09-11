@@ -1,0 +1,294 @@
+
+## projects which are in production
+## ou=production,ou=applications,o=openapi,o=clients,dc=csso,dc=example,dc=com
+
+dn: o=Example WorldWide,dc=example,dc=com
+changetype: add
+objectClass: domain
+objectClass: top
+objectClass: extensibleObject
+dc: example
+o: Example WorldWide
+
+dn: ou=security,o=Example WorldWide,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+ou: security
+
+dn: ou=users,ou=security,o=Example WorldWide,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+ou: users
+
+dn: cn=XMLGW_PRIVADMIN,ou=users,ou=security,o=Example WorldWide,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+cn: XMLGW_PRIVADMIN
+sn: XMLGW_PRIVADMIN
+
+dn: dc=csso,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: domain
+dc: csso
+
+dn: o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: domain
+objectClass: top
+objectClass: extensibleObject
+dc: example
+o: clients
+
+dn: o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: domain
+objectClass: top
+objectClass: extensibleObject
+dc: csso
+o: openapi
+
+dn: ou=applications,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+ou: applications
+
+dn: ou=production,ou=applications,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+ou: production
+
+dn: ou=sandbox,ou=applications,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+ou: sandbox
+
+dn: ou=users,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+ou: users
+
+dn: ou=service types,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: service types
+
+
+dn: mcCertificateAlias=7288edd0fc3ffcbe93a0cf06e3568e28521687bc,ou=users,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: mcSoftwareCertProfile
+mcCertificate:: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NB
+ UUVBdE1hMWNrRmFxVnVwMDk1Tld3Z3JETzFmekVCU1h1bXVPNUlVOGFQc3l2MWh4N0RtCndGQjJ
+ 0dVErSUJHNURmQS9yakd4OXVHL1hxbnl2YjhHVE00dG5NUVN1OUtmRnpSelBwYVdTZ2xzZzVPNX
+ QxcmEKVU1nOVpMNE84Y2hNL1FyRWY1bHl4emMrbkZzVmFoYVNpNWFTZDB5L0EvRWlRaEZhYmJFe
+ nF6dDd6MFQwNEx3YwpqZkJKd2dOeVJrSXFHeW1sc2lpdklOQk9XMDJsVnJEZDM2cFJPeDRBVlE2
+ QmFrbUQ4WXFGWjNKMi9WSHJvK2ZDCkkvY1RFVXJvUGVyTEtKTGdJRGVPaTVBV2dKbzByam5sM2g
+ rRFlFclN1c04xM0UrcUU0YWNCUm51NFZoNHNSeisKbkdUdVVCMzl1THptM2FlRHI2aG82NTFpam
+ 9PV1ZMQ09RRUhDblFJREFRQUJBb0lCQUFwcWFJbnN1Z3lIKzRENQpqZnR3dlFwQm93TmhzVjFHb
+ VlOVkoxL0UwaC9mK1lKSDd3T2xuekZxZFNuajI0V3lFZmszWThtVnVERDhHY0JWCkFVZnJtVFV2
+ RnVVN2ZXOFkxb3NFb2lRaDV0NnQ1RVZzTnFmdzRaaXNXckFUbWx2NkF0aFhQd1c3YVNBWkgySzk
+ KYWpRZ3VNK20zRnFkeWh1RVpIRnRoRXlaWU1qUVYzRWRoUTE3ek9jLzBRY0FWcUhTZFp5amVlKz
+ hBMS8zT1JDNQppUGpUTjd0SXluc0RCV0hWcUtwUU5RczNDdlFlZ3NsWnFkSWFUOTU2RWppMlR6Y
+ UgyYXhKRHBjU21BYnlzRzVnCkZ0WmxMd1ZsZFZtbHBqeitsbVhVOElKcVNpcTVFaW5xWDR6ZGVH
+ Ym1vM3JDdW00SmduVmIxSmF5cUw0dzhVWVEKMVRPYVNBRUNnWUVBNXh3bUl3V29zSUNFMVNlbkp
+ RQUdSZUtCWUVxdzV1bWIvY3o4bFVkUWdKYVVzeDRTendTSgpmeFU1SWduRE93TzFxQkRzb09JVG
+ MyMUFCOFJ1QnUxcDNLWXVIT2RXLzJGS3QwaXNVdWhsU21lSkIzQnhxMC95CnBVMkVyMys0Z2N3Q
+ jJxbE9kazF6czhmdGNLLzc4NkhpYi9vSFVFVXIvdFpUS01uUlNpMmVsNWtDZ1lFQXlEN1QKWXhk
+ b2hZWU9VdVVGZkVnVXhNRHZpa2VlRzhqWEFoNGpXdUF6ejZqWEF6RzZsZDFvaHdndzQ2MGk0a1R
+ tcEtzVwpDSmhqZldyMk9DWjM0K2NuNmo5R2lYOUM2Z0EyQ2xkcWdqL0NpSWFPRlIwWlpHY25vdG
+ pEcWRwWDVTWjVpazEzCkhHMkVaYUFlZmNDOVdCQWM2R1Y1WHZ5N01LM0ZFd2lQVU1uK2xhVUNnW
+ UVBNWlvMW5RbUV3QXV1dnU2WDJ4U1UKS3NOelgrZmpHSVd0MG0xMVhHSkN2VjI2U0V6NkpHeDdW
+ ekpXelJ4MTcrODQybUhJbUUydlczU0JvWHF5clhtQwp4YnBIRUlnaEw0UEF1cHJJN0dVQWc4SnJ
+ TUnBtU2x2NzV6ODFsdWNYWlVVOHozMXdaQWVzNUc2SGZZUDI0K1BrCnRPcUlvQnZUdmgvTGdFTE
+ dpaDYyNUhrQ2dZQnJvem5GbmlPVkFvWllrTHJ1SDJEcWtqc3d2V2FEME9XaVFja0gKWkZUMVh2Q
+ 1V5dnBjN0hMdmdydWs1c0JGbUh2U01CVGI4ZTRvMElJaGxLd0ZXWS9mSHJ3djFMU0hUQzNBU1ZU
+ NwpSb0t2R0lUdlhJRDFzMjFlMzkzdFEyelR4R2E0clFORnlLak9aODk4RVVxMk41TVNhTmxnOGN
+ FOVhXcjkzREFOCllVYno4UUtCZ0JTTnZOeGlpcmpaTVB1RHg3TkY0WDVGcnNCalVEenRpemg3OV
+ didEpPYlF5YTJNZ0xmZTJIdDYKaXBPbVdBYUJES3g2QStzcTZNRVIxamNLaG12SFg4SzRsemVBT
+ DNtN1B3bGdaVmxlVEV1VTl3WkdFK3J0dnBuQwpaaHpnRmZqKzN6RDdvQ3gzanM0T1ExR2hsZnhy
+ K1FYRDJsbEk0THhTWWtYMHZBN1RPbHoxCi0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg=
+ =
+mcCertificateAlias: 7288edd0fc3ffcbe93a0cf06e3568e28521687bc
+mcCertificateExpiration: 
+
+dn: mcCertificateAlias=bab66dc0c4ebcc89f20e8016f35e99888a4b74da,ou=users,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: mcSoftwareCertProfile
+mcCertificate:: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NB
+ UUVBdE1hMWNrRmFxVnVwMDk1Tld3Z3JETzFmekVCU1h1bXVPNUlVOGFQc3l2MWh4N0RtCndGQjJ
+ 0dVErSUJHNURmQS9yakd4OXVHL1hxbnl2YjhHVE00dG5NUVN1OUtmRnpSelBwYVdTZ2xzZzVPNX
+ QxcmEKVU1nOVpMNE84Y2hNL1FyRWY1bHl4emMrbkZzVmFoYVNpNWFTZDB5L0EvRWlRaEZhYmJFe
+ nF6dDd6MFQwNEx3YwpqZkJKd2dOeVJrSXFHeW1sc2lpdklOQk9XMDJsVnJEZDM2cFJPeDRBVlE2
+ QmFrbUQ4WXFGWjNKMi9WSHJvK2ZDCkkvY1RFVXJvUGVyTEtKTGdJRGVPaTVBV2dKbzByam5sM2g
+ rRFlFclN1c04xM0UrcUU0YWNCUm51NFZoNHNSeisKbkdUdVVCMzl1THptM2FlRHI2aG82NTFpam
+ 9PV1ZMQ09RRUhDblFJREFRQUJBb0lCQUFwcWFJbnN1Z3lIKzRENQpqZnR3dlFwQm93TmhzVjFHb
+ VlOVkoxL0UwaC9mK1lKSDd3T2xuekZxZFNuajI0V3lFZmszWThtVnVERDhHY0JWCkFVZnJtVFV2
+ RnVVN2ZXOFkxb3NFb2lRaDV0NnQ1RVZzTnFmdzRaaXNXckFUbWx2NkF0aFhQd1c3YVNBWkgySzk
+ KYWpRZ3VNK20zRnFkeWh1RVpIRnRoRXlaWU1qUVYzRWRoUTE3ek9jLzBRY0FWcUhTZFp5amVlKz
+ hBMS8zT1JDNQppUGpUTjd0SXluc0RCV0hWcUtwUU5RczNDdlFlZ3NsWnFkSWFUOTU2RWppMlR6Y
+ UgyYXhKRHBjU21BYnlzRzVnCkZ0WmxMd1ZsZFZtbHBqeitsbVhVOElKcVNpcTVFaW5xWDR6ZGVH
+ Ym1vM3JDdW00SmduVmIxSmF5cUw0dzhVWVEKMVRPYVNBRUNnWUVBNXh3bUl3V29zSUNFMVNlbkp
+ RQUdSZUtCWUVxdzV1bWIvY3o4bFVkUWdKYVVzeDRTendTSgpmeFU1SWduRE93TzFxQkRzb09JVG
+ MyMUFCOFJ1QnUxcDNLWXVIT2RXLzJGS3QwaXNVdWhsU21lSkIzQnhxMC95CnBVMkVyMys0Z2N3Q
+ jJxbE9kazF6czhmdGNLLzc4NkhpYi9vSFVFVXIvdFpUS01uUlNpMmVsNWtDZ1lFQXlEN1QKWXhk
+ b2hZWU9VdVVGZkVnVXhNRHZpa2VlRzhqWEFoNGpXdUF6ejZqWEF6RzZsZDFvaHdndzQ2MGk0a1R
+ tcEtzVwpDSmhqZldyMk9DWjM0K2NuNmo5R2lYOUM2Z0EyQ2xkcWdqL0NpSWFPRlIwWlpHY25vdG
+ pEcWRwWDVTWjVpazEzCkhHMkVaYUFlZmNDOVdCQWM2R1Y1WHZ5N01LM0ZFd2lQVU1uK2xhVUNnW
+ UVBNWlvMW5RbUV3QXV1dnU2WDJ4U1UKS3NOelgrZmpHSVd0MG0xMVhHSkN2VjI2U0V6NkpHeDdW
+ ekpXelJ4MTcrODQybUhJbUUydlczU0JvWHF5clhtQwp4YnBIRUlnaEw0UEF1cHJJN0dVQWc4SnJ
+ TUnBtU2x2NzV6ODFsdWNYWlVVOHozMXdaQWVzNUc2SGZZUDI0K1BrCnRPcUlvQnZUdmgvTGdFTE
+ dpaDYyNUhrQ2dZQnJvem5GbmlPVkFvWllrTHJ1SDJEcWtqc3d2V2FEME9XaVFja0gKWkZUMVh2Q
+ 1V5dnBjN0hMdmdydWs1c0JGbUh2U01CVGI4ZTRvMElJaGxLd0ZXWS9mSHJ3djFMU0hUQzNBU1ZU
+ NwpSb0t2R0lUdlhJRDFzMjFlMzkzdFEyelR4R2E0clFORnlLak9aODk4RVVxMk41TVNhTmxnOGN
+ FOVhXcjkzREFOCllVYno4UUtCZ0JTTnZOeGlpcmpaTVB1RHg3TkY0WDVGcnNCalVEenRpemg3OV
+ didEpPYlF5YTJNZ0xmZTJIdDYKaXBPbVdBYUJES3g2QStzcTZNRVIxamNLaG12SFg4SzRsemVBT
+ DNtN1B3bGdaVmxlVEV1VTl3WkdFK3J0dnBuQwpaaHpnRmZqKzN6RDdvQ3gzanM0T1ExR2hsZnhy
+ K1FYRDJsbEk0THhTWWtYMHZBN1RPbHoxCi0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg=
+ =
+mcCertificateAlias: bab66dc0c4ebcc89f20e8016f35e99888a4b74da
+mcCertificateExpiration: 6/17/2018
+
+
+dn: mcCertificateAlias=b3df5eaac6550f73d938d4f21e3e39168834fd79,ou=users,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: mcSoftwareCertProfile
+mcCertificate:: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NB
+ UUVBdE1hMWNrRmFxVnVwMDk1Tld3Z3JETzFmekVCU1h1bXVPNUlVOGFQc3l2MWh4N0RtCndGQjJ
+ 0dVErSUJHNURmQS9yakd4OXVHL1hxbnl2YjhHVE00dG5NUVN1OUtmRnpSelBwYVdTZ2xzZzVPNX
+ QxcmEKVU1nOVpMNE84Y2hNL1FyRWY1bHl4emMrbkZzVmFoYVNpNWFTZDB5L0EvRWlRaEZhYmJFe
+ nF6dDd6MFQwNEx3YwpqZkJKd2dOeVJrSXFHeW1sc2lpdklOQk9XMDJsVnJEZDM2cFJPeDRBVlE2
+ QmFrbUQ4WXFGWjNKMi9WSHJvK2ZDCkkvY1RFVXJvUGVyTEtKTGdJRGVPaTVBV2dKbzByam5sM2g
+ rRFlFclN1c04xM0UrcUU0YWNCUm51NFZoNHNSeisKbkdUdVVCMzl1THptM2FlRHI2aG82NTFpam
+ 9PV1ZMQ09RRUhDblFJREFRQUJBb0lCQUFwcWFJbnN1Z3lIKzRENQpqZnR3dlFwQm93TmhzVjFHb
+ VlOVkoxL0UwaC9mK1lKSDd3T2xuekZxZFNuajI0V3lFZmszWThtVnVERDhHY0JWCkFVZnJtVFV2
+ RnVVN2ZXOFkxb3NFb2lRaDV0NnQ1RVZzTnFmdzRaaXNXckFUbWx2NkF0aFhQd1c3YVNBWkgySzk
+ KYWpRZ3VNK20zRnFkeWh1RVpIRnRoRXlaWU1qUVYzRWRoUTE3ek9jLzBRY0FWcUhTZFp5amVlKz
+ hBMS8zT1JDNQppUGpUTjd0SXluc0RCV0hWcUtwUU5RczNDdlFlZ3NsWnFkSWFUOTU2RWppMlR6Y
+ UgyYXhKRHBjU21BYnlzRzVnCkZ0WmxMd1ZsZFZtbHBqeitsbVhVOElKcVNpcTVFaW5xWDR6ZGVH
+ Ym1vM3JDdW00SmduVmIxSmF5cUw0dzhVWVEKMVRPYVNBRUNnWUVBNXh3bUl3V29zSUNFMVNlbkp
+ RQUdSZUtCWUVxdzV1bWIvY3o4bFVkUWdKYVVzeDRTendTSgpmeFU1SWduRE93TzFxQkRzb09JVG
+ MyMUFCOFJ1QnUxcDNLWXVIT2RXLzJGS3QwaXNVdWhsU21lSkIzQnhxMC95CnBVMkVyMys0Z2N3Q
+ jJxbE9kazF6czhmdGNLLzc4NkhpYi9vSFVFVXIvdFpUS01uUlNpMmVsNWtDZ1lFQXlEN1QKWXhk
+ b2hZWU9VdVVGZkVnVXhNRHZpa2VlRzhqWEFoNGpXdUF6ejZqWEF6RzZsZDFvaHdndzQ2MGk0a1R
+ tcEtzVwpDSmhqZldyMk9DWjM0K2NuNmo5R2lYOUM2Z0EyQ2xkcWdqL0NpSWFPRlIwWlpHY25vdG
+ pEcWRwWDVTWjVpazEzCkhHMkVaYUFlZmNDOVdCQWM2R1Y1WHZ5N01LM0ZFd2lQVU1uK2xhVUNnW
+ UVBNWlvMW5RbUV3QXV1dnU2WDJ4U1UKS3NOelgrZmpHSVd0MG0xMVhHSkN2VjI2U0V6NkpHeDdW
+ ekpXelJ4MTcrODQybUhJbUUydlczU0JvWHF5clhtQwp4YnBIRUlnaEw0UEF1cHJJN0dVQWc4SnJ
+ TUnBtU2x2NzV6ODFsdWNYWlVVOHozMXdaQWVzNUc2SGZZUDI0K1BrCnRPcUlvQnZUdmgvTGdFTE
+ dpaDYyNUhrQ2dZQnJvem5GbmlPVkFvWllrTHJ1SDJEcWtqc3d2V2FEME9XaVFja0gKWkZUMVh2Q
+ 1V5dnBjN0hMdmdydWs1c0JGbUh2U01CVGI4ZTRvMElJaGxLd0ZXWS9mSHJ3djFMU0hUQzNBU1ZU
+ NwpSb0t2R0lUdlhJRDFzMjFlMzkzdFEyelR4R2E0clFORnlLak9aODk4RVVxMk41TVNhTmxnOGN
+ FOVhXcjkzREFOCllVYno4UUtCZ0JTTnZOeGlpcmpaTVB1RHg3TkY0WDVGcnNCalVEenRpemg3OV
+ didEpPYlF5YTJNZ0xmZTJIdDYKaXBPbVdBYUJES3g2QStzcTZNRVIxamNLaG12SFg4SzRsemVBT
+ DNtN1B3bGdaVmxlVEV1VTl3WkdFK3J0dnBuQwpaaHpnRmZqKzN6RDdvQ3gzanM0T1ExR2hsZnhy
+ K1FYRDJsbEk0THhTWWtYMHZBN1RPbHoxCi0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg=
+ =
+mcCertificateAlias: b3df5eaac6550f73d938d4f21e3e39168834fd79
+mcCertificateExpiration: 1/11/2019
+
+
+dn: cn=app123,ou=production,ou=applications,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: mcOpenAPIAppProfile
+objectClass: top
+objectClass: groupOfNames
+cn: app123
+mcOwner: test123
+member: mcCertificateAlias=7288edd0fc3ffcbe93a0cf06e3568e28521687bc,ou=users,o=openapi,o=clients,dc=csso,dc=example,dc=com
+member: mcCertificateAlias=bab66dc0c4ebcc89f20e8016f35e99888a4b74da,ou=users,o=openapi,o=clients,dc=csso,dc=example,dc=com
+
+dn: cn=app124,ou=production,ou=applications,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: mcOpenAPIAppProfile
+objectClass: top
+objectClass: groupOfNames
+mcOwner: test123
+status: NO
+cn: app124
+member: mcCertificateAlias=b3df5eaac6550f73d938d4f21e3e39168834fd79,ou=users,o=openapi,o=clients,dc=csso,dc=example,dc=com
+
+dn: cn=app125,ou=production,ou=applications,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: mcOpenAPIAppProfile
+objectClass: top
+objectClass: groupOfNames
+mcOwner: test123
+status: YES
+member: mcCertificateAlias=7288edd0fc3ffcbe93a0cf06e3568e28521687bc,ou=users,o
+ =openapi,o=clients,dc=csso,dc=example,dc=com
+cn: app125
+
+dn: cn=app126,ou=production,ou=applications,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: mcOpenAPIAppProfile
+objectClass: top
+objectClass: groupOfNames
+mcOwner: test124
+status: YES
+member: mcCertificateAlias=7288edd0fc3ffcbe93a0cf06e3568e28521687bc,ou=users,o
+ =openapi,o=clients,dc=csso,dc=example,dc=com
+cn: app126
+
+
+
+dn: cn=app123,ou=sandbox,ou=applications,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: mcOpenAPIAppProfile
+objectClass: top
+objectClass: groupOfNames
+cn: app123
+mcOwner: test123
+member: mcCertificateAlias=7288edd0fc3ffcbe93a0cf06e3568e28521687bc,ou=users,o=openapi,o=clients,dc=csso,dc=example,dc=com
+member: mcCertificateAlias=bab66dc0c4ebcc89f20e8016f35e99888a4b74da,ou=users,o=openapi,o=clients,dc=csso,dc=example,dc=com
+
+dn: cn=app124,ou=sandbox,ou=applications,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: mcOpenAPIAppProfile
+objectClass: top
+objectClass: groupOfNames
+mcOwner: test123
+status: NO
+cn: app124
+member: mcCertificateAlias=b3df5eaac6550f73d938d4f21e3e39168834fd79,ou=users,o=openapi,o=clients,dc=csso,dc=example,dc=com
+
+dn: cn=app125,ou=sandbox,ou=applications,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: mcOpenAPIAppProfile
+objectClass: top
+objectClass: groupOfNames
+mcOwner: test123
+status: YES
+member: mcCertificateAlias=7288edd0fc3ffcbe93a0cf06e3568e28521687bc,ou=users,o
+ =openapi,o=clients,dc=csso,dc=example,dc=com
+cn: app125
+
+
+
+dn: cn=Premium,ou=service types,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: groupOfUniqueNames
+objectClass: top
+uniqueMember: cn=app123
+uniqueMember: cn=app124
+cn: Premium
+
+dn: cn=General,ou=service types,o=openapi,o=clients,dc=csso,dc=example,dc=com
+changetype: add
+objectClass: groupOfUniqueNames
+objectClass: top
+uniqueMember: cn=app124
+uniqueMember: cn=app125
+cn: Premium

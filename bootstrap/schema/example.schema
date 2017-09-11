@@ -1,0 +1,77 @@
+attributetype ( 1.3.6.1.4.1.28768.501.1.36 NAME 'mcsecurityanswer1'
+	DESC 'Security Question Choice 1 Answer'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE
+	USAGE userApplications )
+attributetype ( 1.3.6.1.4.1.28768.501.1.37 NAME 'mcsecurityanswer2'
+	DESC 'Security Question Choice 2 Answer'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE
+	USAGE userApplications )
+attributetype ( 1.3.6.1.4.1.28768.501.1.38 NAME 'mcsecurityquestion1'
+	DESC 'Security Question Choice 1'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE
+	USAGE userApplications )
+attributetype ( 1.3.6.1.4.1.28768.501.1.39 NAME 'mcsecurityquestion2'
+	DESC 'Security Question Choice 2'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE
+	USAGE userApplications )
+attributetype ( 1.3.6.1.4.1.28768.501.1.42 NAME 'mcfeaturedataset'
+	DESC 'Feature Dataset'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	USAGE userApplications )
+attributetype ( 1.3.6.1.4.1.28768.501.1.50 NAME 'status'
+	DESC 'USER STATUS Yes|No'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE
+	USAGE userApplications )
+attributetype ( 1.3.6.1.4.1.28768.501.1.51 NAME 'mcServiceType'
+	DESC 'Service Type Premium|General|Both'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	EQUALITY caseIgnoreMatch
+	ORDERING caseIgnoreOrderingMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SINGLE-VALUE
+	USAGE userApplications )
+attributetype ( 1.3.6.1.4.1.28768.501.1.52 NAME 'mcCertificate'
+	DESC 'Used to represent certificates from one or more Certification Authorities representing a user.'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.5
+	USAGE userApplications )
+attributetype ( 1.3.6.1.4.1.28768.501.1.53 NAME 'mcCertificateAlias'
+	DESC 'Userselected identifier of a certificate'
+	EQUALITY caseIgnoreMatch
+	ORDERING caseIgnoreOrderingMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE
+	USAGE userApplications )
+attributetype ( 1.3.6.1.4.1.28768.501.1.54 NAME 'mcCertificateExpiration'
+	DESC 'Expiration date of a certificate in yyyymmdd format'
+	EQUALITY 1.3.6.1.4.1.1466.109.114.2
+	SUBSTR 1.3.6.1.4.1.1466.109.114.3
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+	SINGLE-VALUE
+	USAGE userApplications )
+attributetype ( 1.3.6.1.4.1.28768.501.1.55 NAME 'mcOwner'
+	DESC 'mcOwner'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE
+	USAGE userApplications )
+objectclass ( 1.3.6.1.4.1.28768.501.2.2 NAME 'mcOpenAPIServProfile'
+	DESC 'Contains Profile Server Attributes'
+	SUP top
+	STRUCTURAL
+	MUST mcServiceType )
+objectclass ( 1.3.6.1.4.1.28768.501.2.1 NAME 'mcOpenAPIAppProfile'
+	DESC 'Contains Profile mcOwner Attributes'
+	SUP ( top $ groupOfNames )
+	STRUCTURAL
+	MUST ( cn $ mcOwner )
+	MAY status)
+objectclass ( 1.3.6.1.4.1.28768.501.2.3 NAME 'mcSoftwareCertProfile'
+	DESC 'Contains software certificate attributes'
+	SUP top
+	STRUCTURAL
+	MUST ( mcCertificate $ mcCertificateAlias $ mcCertificateExpiration ) )
