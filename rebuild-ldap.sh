@@ -15,7 +15,7 @@ function reset_ldap_data () {
 function start_ldap () {
 
 	cmd="docker run --name openldap -d -p 389:389 -p 636:636"
-	cmd="${cmd} -e SLAPD_ADDITIONAL_MODULES=memberof"
+#	cmd="${cmd} -e SLAPD_ADDITIONAL_MODULES=memberof"
 	cmd="${cmd} -v ${LDAP_DATADIR}/slapd/database:/var/lib/ldap"
 	cmd="${cmd} -v ${LDAP_DATADIR}/slapd/config:/etc/ldap/slapd.d"
 	cmd="${cmd} example/openldap:latest"
