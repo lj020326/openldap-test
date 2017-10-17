@@ -1,8 +1,15 @@
 /.*
 !/.git*
 test/
+volumes/
 data/
+.DS_Store
 
 #admin/
 configs/
+save/
+
+history*.txt
+
+.DS_Store
 
