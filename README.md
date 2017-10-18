@@ -169,11 +169,14 @@ To reset all the volume test data to original state and rebuild ldap image and r
     ./rebuild-ldap.sh
 
 
+## Build process with respect to LDAP data/schema testing
+
 Assuming you are developing a set of LDAP data and testing with it, the process goes like so:
 
 1) update *ldif file(s) in bootstrap/ldif and/or 
 2) update *schema files(s) in bootstrap/schema
-3) then run ./rebuild.sh 
+3) then run ./rebuild-ldap.sh 
+
 
 # Configuring LDAP
 
