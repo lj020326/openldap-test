@@ -1,7 +1,5 @@
-#REGISTRYHOST=localhost:5000/
+#REGISTRYHOST=artifactory.dev.example.int:6555
 REGISTRYHOST=127.0.0.1:5000
-#IMAGE_NAME = example/openldap
-#NAME = $(REGISTRYHOST)$(IMAGE_NAME)
 NAME = example/openldap
 VERSION = 1.1.9
 
@@ -19,7 +17,6 @@ test:
 	env NAME=$(NAME) VERSION=$(VERSION) bats test/test.bats
 
 tag_latest:
-#	docker tag $(NAME):$(VERSION) $(NAME):latest
 	docker tag $(NAME):$(VERSION) $(REGISTRYHOST)/$(NAME):latest
 
 release: build test tag_latest

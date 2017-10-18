@@ -2,26 +2,96 @@
 
 # Quick Start
 
-1) git clone https://github.com/lj020326/openldap-test.git
+Clone this project:
 
-2) cd openldap-test
+    git clone https://github.com/lj020326/openldap-test.git
+    cd openldap-test
 
-3) docker-compose up 
+Start the ldap container
 
-4) use the browser to go to the phpldapadmin app listening at https://localhost:8080
+    docker-compose up 
 
-5) login with following credentials:
+Using a browser goto the phpldapadmin app listening at https://localhost:8080.
+
+Login with following credentials:
 
     login DN:   cn=admin,dc=example,dc=com
-
     pwd:        Adm1n!
+
+
+## Make your own example/openldap image
+
+Clone this project:
+
+    git clone https://github.com/lj020326/openldap-test.git
+	cd docker-openldap
+
+Add/Modify your custom certificate, bootstrap ldif and environment files...
+
+Build your image:
+
+	make build
+
+Run your image:
+
+	docker run --detach example/openldap:0.1.0
+
+## Tests
+
+We use **Bats** (Bash Automated Testing System) to test this image:
+
+> [https://github.com/sstephenson/bats](https://github.com/sstephenson/bats)
+
+Install Bats, and in this project directory run:
+
+	make test
+
+## Release the example/openldap image to local registry
+
+This assumes you are running a local docker registry
+
+Build, test, tag and push the docker image:
+
+    make release
+
+Confirm image has been pushed to local registry
+
+    curl -X GET http://localhost:5000/v2/_catalog
+
+
+## Release the example/openldap image to example artifactory
+
+This assumes you are running artifactory as the firm docker registry
+
+Modify the makefile REGISTRYHOST to point to deployment docker registry
+
+    REGISTRYHOST=artifactory.dev.example.int:6555
+
+Log into the docker registry
+
+    docker login artifactory.dev.example.int:6555
+
+Build, test, tag and push the docker image:
+
+    make release
+
+Confirm image has been pushed to artifactory registry.
+
+Log out of registry when finished
+
+    docker logout artifactory.dev.example.int:6555
 
 
 ## To rebuild and test openldap image
 
-1) git clone https://github.com/lj020326/openldap-test.git
-2) cd openldap-test
-3) ./rebuild.sh 
+Clone the repo
+
+    git clone https://github.com/lj020326/openldap-test.git
+    cd openldap-test
+
+Rebuild and start the docker image
+
+    ./rebuild-ldap.sh 
 
 If successful, the script finishes with a tail on the docker log file
 
@@ -53,7 +123,7 @@ You should see something like this:
 
 If you get this, then test from another shell with the following ldap commands: 
 
-## Test openldap
+## Run openldap test queries for example data/schema
 Query the database
 
     ldapsearch -x -H ldap://localhost -b dc=example,dc=com -D "cn=admin,dc=example,dc=com" -w Adm1n!
